@@ -12,5 +12,11 @@
 - Select tool
 - Ask: Count albums
 
-## How to run
+## How to run using STDIO
 uvx mcpo --port 8000 -- uv run sql_mcp_server.py 
+
+## How to run using SSE
+- Run mcp server using sse (Note that we are running sse on 8001, see the last line in sql_mcp_server.py)
+uv run sql_mcp_server.py 
+- Run mcpo server
+uvx mcpo --port 8000 --server-type "sse" -- http://127.0.0.1:8001/sse
