@@ -95,4 +95,4 @@ def execute_sql_query(sql_query: str) -> str:
         return f"Error: {str(e)}"
 
 if __name__ == "__main__":
-    mcp.run(transport="sse", port=8000)
+    mcp.run()
